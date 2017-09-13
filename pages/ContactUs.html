@@ -1,69 +1,58 @@
-<!doctype html>
-
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-
-  <title>Jay Aeronautics</title>
-  <meta name="description" content="HTML5 Template">
+<!DOCTYPE html>
+<html>
 <style>
-div.container {
+input[type=text], select {
     width: 100%;
-    border: 1px solid gray;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
-header, footer {
-    padding: 1em;
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
     color: white;
-    background-color: black;
-    clear: left;
-    text-align: center;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
-nav {
-    float: left;
-    max-width: 160px;
-    margin: 0;
-    padding: 1em;
+
+input[type=submit]:hover {
+    background-color: #45a049;
 }
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-   
-nav ul a {
-    text-decoration: none;
-}
-article {
-    margin-left: 170px;
-    border-left: 1px solid gray;
-    padding: 1em;
-    overflow: hidden;
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
 }
 </style>
-</head>
+<body>
 
-<body style = "background-color:powderblue;">
+<h3>Using CSS to style an HTML Form</h3>
 
-<div class="container">
+<div>
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-<header>
-   <h1>Jay Aeronautics</h1>
-   <h2>Contact Us</h2>
-   <p> Please use this form for any questions or concerns and we will reply via email as soon as possible.</p>
-</header>
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
   
-<nav>
-  <ul>
-    <li><a href = "https://jb2468.github.io/index.htm">Home</a></li>
-  </ul>
-</nav>
-
-<article>
-  
-  
-</article>
-
-  <footer><a href="https://jb2468.github.io/pages/ContactUs.html">Contact Us</a>
-
+    <input type="submit" value="Submit">
+  </form>
 </div>
 
 </body>
