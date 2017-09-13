@@ -1,7 +1,13 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Jay Aeronautics</title>
+  <meta name="description" content="HTML5 Template">
 <style>
-input[type=text], select {
+    input[type=text], select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -26,18 +32,58 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
 
-div {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
 }
 </style>
-<body>
+</head>
 
-<h3>Using CSS to style an HTML Form</h3>
+<body style = "background-color:powderblue;">
 
-<div>
-  <form action="/action_page.php">
+<div class="container">
+
+<header>
+   <h1>Jay Aeronautics</h1>
+   <h2>Contact Us</h2>
+   <p> Please use this form for any questions or concerns and we will reply via email as soon as possible.</p>
+</header>
+  
+<nav>
+  <ul>
+    <li><a href = "https://jb2468.github.io/index.htm">Home</a></li>
+  </ul>
+</nav>
+
+<article>
+   <form action="/action_page.php">
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
@@ -53,6 +99,11 @@ div {
   
     <input type="submit" value="Submit">
   </form>
+  
+</article>
+
+  <footer><a href="https://jb2468.github.io/pages/ContactUs.html">Contact Us</a>
+
 </div>
 
 </body>
