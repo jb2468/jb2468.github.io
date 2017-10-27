@@ -160,7 +160,8 @@ article {
 </nav>
   
 <article>
- <form name="contactForm" onsubmit="validateForm()">
+ <form name="contactForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
      
     <label for="fname">First Name:</label>
    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
