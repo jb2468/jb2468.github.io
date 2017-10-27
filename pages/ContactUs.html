@@ -3,6 +3,9 @@
 <html lang="en">
 <head>
 <script>
+ var d = new Date();
+document.getElementById("demo").innerHTML = d.getTime();
+    
 function validateForm() {
     var x = document.forms["myForm"]["fname"].value;
     if (x == "") {
@@ -162,6 +165,7 @@ article {
 </article>
 
   <footer><a href="https://jb2468.github.io/pages/ContactUs.html">Contact Us</a>
+  <p id="demo"></p>
 
 </div>
 
