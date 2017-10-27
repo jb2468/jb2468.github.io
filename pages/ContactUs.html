@@ -3,41 +3,13 @@
 <html lang="en">
 <head>
 <script>
-   function validateForm() 
-{
-    var a = document.contactForm.firstname.value;
-    var b = document.contactForm.lastname.value;
-    var c = document.contactForm.email.value;
-    var d = document.contactForm.Contactreason.value;
-    var e = document.contactForm.Commentbox.value;
-
-    if (a == "" || a == null)
-        {
-            alert("First Name must be filled out.");
-            return false;
-        }
-    else if (b == "" || b == null)
-        {
-            alert("Last Name must be filled out.");
-            return false;
-        }
-    else if(c == "" || c == null)
-        {
-            alert("Email must be filled out.");
-            return false; 
-        }
-    else if(d == "" || d == null)
-        {
-            alert("Reason must be filled out.");
-            return false; 
-        }
-    else if(e == "" || e == null)
-        {
-            alert("Subject must be filled out.");
-            return false; 
-        }
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
 }
-
 </script>
   
   <meta charset="utf-8">
@@ -160,7 +132,7 @@ article {
 </nav>
   
 <article>
- <form name="contactForm" action="/action_page.php"
+ <form name="myForm" action="/action_page.php"
 onsubmit="return validateForm()" method="post">
      
     <label for="fname">First Name:</label>
@@ -170,7 +142,7 @@ onsubmit="return validateForm()" method="post">
    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
      <br/>
     <label for="email">Email Address:</label>
-    &emsp;&emsp;&nbsp;<input type="text" id="Email" name="Email" placeholder="Your Email address..">
+    <input type="text" id="Email" name="Email" placeholder="Your Email address..">
     <br/>
     <label for="contact reason">Contact Reason:</label>
     <select id="Contact Reason" name="Contactreason">
@@ -184,7 +156,7 @@ onsubmit="return validateForm()" method="post">
     <textarea name="subject" placeholder="Type comment here..." style="height:300px"></textarea>
     <br/>
      
-   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="submit" value="Submit">
+   <input type="submit" value="Submit">
     <input type="reset" value="Clear">
   </form>
   </article>
