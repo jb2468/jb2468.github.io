@@ -2,7 +2,15 @@
 
 <html lang="en">
 <head>
-<script type="text/javascript" src="/javascript.js"></script>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+</script>
   
   <meta charset="utf-8">
 
@@ -124,16 +132,17 @@ article {
 </nav>
 
 <article>
-   <form name = "contactForm" onsubmit="validateForm()">
+   <form name="myForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
      
     <label for="fname">First Name:</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+    First Name:<input type="text" id="fname" name="firstname" placeholder="Your first name..">
     <br/>
-    <label for="lname">Last Name:</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+   <label for="lname">Last Name:</label>
+   Last Name: <input type="text" id="lname" name="lastname" placeholder="Your last name..">
      <br/>
-      <label for="email">Email Address:</label>
-    &emsp;&emsp;&nbsp;<input type="text" id="Email" name="Email" placeholder="Your Email address..">
+    <label for="email">Email Address:</label>
+   Email Address: <input type="text" id="Email" name="Email" placeholder="Your Email address..">
     <br/>
     <label for="contact reason">Contact Reason:</label>
     <select id="Contact Reason" name="Contact Reason">
@@ -144,10 +153,10 @@ article {
       <br/>
      <label for="Comment Box">Comment Box:</label>
       <br/>
-     <textarea name="subject" placeholder="Type comment here..." style="height:300px"></textarea>
+    Comment: <textarea name="subject" placeholder="Type comment here..." style="height:300px"></textarea>
     <br/>
-  
-    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; <input type="submit" value="Submit">
+     
+    <input type="submit" value="Submit">
     <input type="reset" value="Clear">
   </form>
   
