@@ -11,9 +11,6 @@ function validateForm() {
     }
 }
 </script>
-<script>
-document.getElementById("demo").innerHTML = Date();
-</script>
   
   <meta charset="utf-8">
 
@@ -165,7 +162,11 @@ article {
 </article>
 
   <footer><a href="https://jb2468.github.io/pages/ContactUs.html">Contact Us</a>
-  <footer><p id="demo"></p>
+   <p id="date"></p>
+            <script>
+                var d = new Date();
+                document.getElementById("date").innerHTML = d.toDateString();
+            </script>
 
 </div>
 
