@@ -8,8 +8,8 @@
     var a = document.contactForm.firstname.value;
     var b = document.contactForm.lastname.value;
     var c = document.contactForm.email.value;
-    var d = document.contactForm.contactreason.value;
-    var e = document.contactForm.subject.value;
+    var d = document.contactForm.Contactreason.value;
+    var e = document.contactForm.Commentbox.value;
 
     if (a == "" || a == null)
         {
@@ -173,13 +173,13 @@ onsubmit="return validateForm()" method="post">
     &emsp;&emsp;&nbsp;<input type="text" id="Email" name="Email" placeholder="Your Email address..">
     <br/>
     <label for="contact reason">Contact Reason:</label>
-    <select id="Contact Reason" name="Contact Reason">
+    <select id="Contact Reason" name="Contactreason">
       <option value="Question">Question</option>
       <option value="Problem">Problem</option>
       <option value="Order status update">Order status update</option>
      </select>
       <br/>
-     <label for="Comment Box">Comment Box:</label>
+     <label for="Commentbox">Comment Box:</label>
       <br/>
     <textarea name="subject" placeholder="Type comment here..." style="height:300px"></textarea>
     <br/>
