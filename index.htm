@@ -60,54 +60,43 @@ article {
     font-family: verdana;
 }
 .dropbtn {
-    background-color:inherit;
-    color: #373737;
+    background-color: #4CAF50;
+    color: white;
     padding: 16px;
-    font-size: 210%;
+    font-size: 16px;
     border: none;
     cursor: pointer;
 }
 
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
 
 .dropdown {
     position: relative;
-    display:inline-block;
+    display: inline-block;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
-    min-width: inherit;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    overflow: auto;
-    left: 180;
-    right: auto;
-    bottom: 100px
 }
 
-
 .dropdown-content a {
-    color: #373737;
+    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-size: 200%;
 }
 
+.dropdown a:hover {background-color: #f1f1f1}
 
-.dropdown-content a:hover {background-color: #DCD0C0}
-
-
-.dropdown:hover .dropdown-content {
-    display: inline-block;
-}
-
-
-.dropdown:hover .dropbtn {
-    color: #DCD0C0;
-}
+.show {display:block;}
 </style>
 </head>
 
@@ -124,8 +113,10 @@ article {
 	  
     <li><a href = "https://jb2468.github.io/index.htm">Home</a></li>
 	  <div class="dropdown">
-                        <button class="dropbtn">Products</button>
-<div class="dropdown-content">
+                        <button onclick="myFunction()"
+				class = "dropbtn">Products</button>
+<div id="myDropdown"
+     class = "dropdown-content">
 	
     <a href="https://jb2468.github.io/pages/SingleEngine.html">Single Engine Aircraft</a>
     <a href="https://jb2468.github.io/pages/Helicopters.html">Helicopters</a>
