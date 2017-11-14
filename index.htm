@@ -221,6 +221,25 @@ window.onclick = function(event) {
 	Everything from single engine aircraft, all the way to personal helicopters, <br>
 	we have you covered.</p><hr/>
 	
+	<script>
+            var myIndex = 0;
+            carousel();
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) {
+                    myIndex = 1
+                }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 4000); // Change image every 2 seconds
+            }
+        </script>
+	
+	
 <table style = "width 100%">
 	<tr>
 		<th><img src = "http://www.hitchcockaviation.com/wp-content/uploads/2013/08/turbo.png" alt = "Logo" </th>
