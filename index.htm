@@ -97,6 +97,68 @@ article {
 .dropdown a:hover {background-color: #f1f1f1}
 
 .show {display:block;}
+	
+.mySlides{
+    display: none;
+}
+
+.slider {
+  max-width: 700px;
+  height: 200px;
+  margin: 20px auto;
+  position: relative;
+}
+.slide1,.slide2,.slide3,.slide4, {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.slide1 {
+  background: url(http://www.charter-a.com/wp-content/uploads/2014/10/helicporte-hire.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade 8s infinite;
+-webkit-animation:fade 8s infinite;
+
+} 
+.slide2 {
+  background: url(https://i.pinimg.com/originals/f5/83/d1/f583d180c7cafac0d3f285c534586cef.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade2 8s infinite;
+-webkit-animation:fade2 8s infinite;
+}
+.slide3 {
+    background: url(http://files.sendible.com/6432309/original.jpeg)no-repeat center;
+      background-size: cover;
+    animation:fade3 8s infinite;
+-webkit-animation:fade3 8s infinite;
+}
+.slide4 {
+	  background: url(http://cdn.barrett-jackson.com/staging/carlist/items/Fullsize/Cars/185547/185547_Front_3-4_Web.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade3 8s infinite;
+-webkit-animation:fade3 8s infinite;
+}	
+@keyframes fade
+{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+@keyframes fade2
+{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+@keyframes fade3
+{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
 </style>
 </head>
 
@@ -105,7 +167,9 @@ article {
 <div class="dropdown">
 
 <header>
+	
    <h1>Jay Aeronautics</h1>
+	
 </header>
   
 <nav>
@@ -146,7 +210,13 @@ window.onclick = function(event) {
 </nav>
 
 <article>
-  <h1><img src = "https://pbs.twimg.com/profile_images/1303459529/blue_jays_logo.png" alt ="Logo" width = "30%"></h1>
+  <h1>
+	<div class='slider'>
+ 	 <div class='slide1'></div>
+ 	 <div class='slide2'></div>
+ 	 <div class='slide3'></div>
+</div>
+	  </h1>
   <p style="text-align:center;"> Here at Jay Aeronautics, we do our best to supply all of your aerial needs.<br>
 	Everything from single engine aircraft, all the way to personal helicopters, <br>
 	we have you covered.</p><hr/>
