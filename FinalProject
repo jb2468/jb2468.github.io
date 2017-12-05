@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   
+    <title>Final Project</title>
+    <h1>The Great Race</h1>
+</head>
+
+<body>
+
+    <article>Let's Race!</article>
+
+    <div2 onclick="switchLight(0);" class="light stop on" id="pause"></div2>
+    <div2 onclick="switchLight(1);" class="light slow"></div2>
+    <div2 onclick="switchLight(2);" class="light go" id="go"></div2>
+
+
+    <div class="red"></div>
+
+    <div class="blue"></div>
+
+   
+    <script>
+        $(document).ready(function() {
+            $("#go").click(function() {
+                var r = $('.red'),
+                    b = $('.blue'),
+                    wW = $(window).width(),
+                    rSpeed = Math.floor(Math.random() * wW + wW),
+                    bSpeed = Math.floor(Math.random() * wW + wW);
+                switchLight(2);
+                function winTest() {
+                    if (rSpeed > bSpeed) {
+                        alert('1 wins!');
+                        reset();
+                    } else {
+                        alert('2 wins!');
+                        reset();
+                    }
+                    switchLight(0);
+                }
+                function race() {
+                    var rAnim = r.animate({
+                        left: rSpeed
+                    }, {
+                        duration: 4000,
+                        done: function() {
+                            bAnim.stop();
+                            winTest();
+                        }
+                    });
+                    var bAnim = b.animate({
+                        left: bSpeed
+                    }, {
+                        duration: 4000,
+                        done: function() {
+                            rAnim.stop();
+                            winTest();
+                        }
+                    });
+                }
+                race();
+                function reset() {
+                    rSpeed = 0;
+                    bSpeed = 0;
+                    r.css('left', 0);
+                    b.css('left', 0);
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
